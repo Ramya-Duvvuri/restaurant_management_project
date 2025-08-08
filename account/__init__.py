@@ -1,6 +1,6 @@
 <html>
 <head>
-<title> Home<title/>
+<title> Home</title>
 <style>
 body {
     margin :0,
