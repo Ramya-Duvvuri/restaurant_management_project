@@ -9,7 +9,14 @@ from .serializers import ItemSerializer
 '''
 NOTE: Conside this as a reference and follow this same coding structure or format to work on you tasks
 '''
-
+MENU_ITEMS = [
+    {"id":1,"name": "Margheritha Pizza","price": 250}
+    {"id":2,"name": "Cheese Corn Pizza","price ":350}
+    {"id":3,"name":"Coco Cola","price":150}
+]
+class MenuListView(APIView):
+    def(self,request):
+        return Response(MENU_ITEMS, status = status.HTTP_200_OK)
 # Create your views here.
 class ItemView(APIView):
 
