@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'products',
     'orders',
 ]
-
+RESTAURANT_NAME ="The Gourmet Kitchen"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
