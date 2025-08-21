@@ -1,0 +1,16 @@
+{% extends  "base.html" %}
+{% block title %} Contact Us -Restaurant {% endblock %}
+{% block content %}
+<div style ="max-width : 50px;margin : 20px auto ; text-align:center">
+    <h2> Contact Us</h2>
+    <form id = "ContactForm" onsubmit="return validateForm()">
+        <label for = "name">name:</label><br/>
+        <input type = "text" id ="name" name = "name">
+        <label for="email">  email: </label><br/>
+        <input type="email" id = "email" name="email">
+        <label for = "text"> text: </label><br/>
+        <input type="text" id ="messages" name = "messages">
+        <button type="submit"> submit</button>
+    </form>
+</div>
+{% endblock %}
