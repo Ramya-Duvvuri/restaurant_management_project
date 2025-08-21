@@ -1,0 +1,16 @@
+{% load static %}
+{%load tz %}
+<html>
+    <head>
+        <title> Restaurant Management </title>
+        <link rel ="stylesheet" href="{% static home.css %}">
+    </head>
+    <body>
+        <div class="content">
+            {%block content %}{%end block %}
+        </div>
+    <footer style="text-align : center ;margin_top:50px ;padding : 15px;color: green;">
+        &copy;{%now "Y"%} My Restaurant . All rights reserved
+    </footer>
+    </body>
+</html>
