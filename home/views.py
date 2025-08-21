@@ -8,3 +8,5 @@ def home_view(request):
         'restaurant_name':restaurant_name,
         'phone_number':phone_number
     })
+def reservations_view(request):
+    return render(request,'reservations.html')
