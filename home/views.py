@@ -10,3 +10,5 @@ def home_view(request):
     })
 def reservations_view(request):
     return render(request,'reservations.html')
+def contact_view(request):
+    return render(request,'contact.html')
