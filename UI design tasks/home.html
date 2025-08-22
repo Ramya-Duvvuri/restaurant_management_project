@@ -7,7 +7,9 @@
     {% block content %}
     <h1> Welcome to {{restaurant_name}}</h1>
     <img src="{% static 'logo.png'%}" alt="Restaurant Logo" style="width :200px ;height = auto;">
-    
+    <form action="#" method="get">
+        <input type="text " name="q" placeholder="Search your items..." required>
+        <button type="submit"> Search</button>
     <p> Call us :{{phone_number}}</p>
     {%endblock %}
 </body>
