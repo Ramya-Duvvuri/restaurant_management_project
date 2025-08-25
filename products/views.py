@@ -14,6 +14,7 @@ MENU_ITEMS = [
     {"id":2,"name": "Cheese Corn Pizza","price ":350}
     {"id":3,"name":"Coco Cola","price":150}
 ]
+return Response(MENU_ITEMS)
 class MenuListView(APIView):
     def(self,request):
         return Response(MENU_ITEMS, status = status.HTTP_200_OK)
