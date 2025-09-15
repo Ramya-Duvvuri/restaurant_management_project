@@ -28,3 +28,12 @@ class OrderItem(models.Model):
         return f"{self.menu_item.name} x {self.quantity}"
     def get_item_total(self):
         return self.menu_item.price * self.quantity
+
+class RestaurantLocation(models.Model):
+    address = models.CharField(max_length = 255)
+    city = models.CharField(max_length = 15)
+    state = models.CharField(max_length = 30)
+    zip_code = models.CharField(max_length = 10)
+
+    def __str__(self):
+        return f "{self.address},{self.city},{self.state},{self.zip_code}"
