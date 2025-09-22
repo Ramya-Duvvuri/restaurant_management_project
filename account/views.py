@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.db import DatabaseError
-
+from .models import Restaurant
 def signup_view(request):
     if request.method =='POST':
         form = UserCreationForm(request.POST)
@@ -20,6 +20,10 @@ def signup_view(request):
     else:
         form = UserCreationForm()
     return render(request,'signup.html',{'form':form})
+
+def homepage(request):
+    restaurant = Restaurant.object.first()
+    return render(request,'homepage.html',{'restaurant':restaurant})
 
 
 # Create your views here.
