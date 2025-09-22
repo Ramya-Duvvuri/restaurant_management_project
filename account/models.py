@@ -9,3 +9,10 @@ class UserProfile(models.Model):
         return self.name or self.user.username
 
 # Create your models here.
+class Restaurant(models.Model):
+    name = models.CharField(max_length = 50)
+    description = models.TextField()
+    address = models.CharField(max_length = 150)
+
+    def __str__(self):
+        return self.name
