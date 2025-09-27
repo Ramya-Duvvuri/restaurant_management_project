@@ -38,3 +38,9 @@ class RestaurantLocation(models.Model):
 
     def __str__(self):
         return f "{self.address},{self.city},{self.state},{self.zip_code}"
+
+class OrderStatus(models.Model):
+    name = models.CharField(max_length = 50,unique = TRUE)
+
+    def __str__(self):
+        return self.name
