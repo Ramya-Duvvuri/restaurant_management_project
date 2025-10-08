@@ -1,6 +1,16 @@
 from django.shortcuts import render
 from django.config import settings
 from .serializers import MenuCategorySerializer
+from .models import Table
+from .serializers import TableSerializer
+
+class TableListView(generics.ListAPIView):
+    queryset = Table.objects.all()
+    serializer_class = TableSerializer
+
+class TableDetailedView(generics.RetrieveAPIView):
+    queryset = Table.objects.all()
+    serializer_class = TableSerializer
 
 class MenuCategoryListView(ListAPIView):
     queryset = MenuCategory.objects.all()
